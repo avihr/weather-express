@@ -8,6 +8,8 @@ const app = express();
 
 const directory = import.meta.dirname;
 
+const port = process.env.PORT || 3000;
+
 const publicDirPath = path.join(directory, "../public");
 const viewsPath = path.join(directory, "../templates/views");
 const partaislPath = path.join(directory, "../templates/partials");
@@ -81,6 +83,6 @@ app.get("*", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server up on port 3000");
 });
