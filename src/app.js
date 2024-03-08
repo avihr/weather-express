@@ -46,7 +46,7 @@ app.get("/help", (req, res) => {
 app.get("/weather", (req, res) => {
     if (!req.query.location)
         return res.send({
-            error: "Loacation not provided",
+            error: "Please provide a location",
         });
     forecast(req.query.location, (err, weatherInfo = {}) => {
         if (err) {
