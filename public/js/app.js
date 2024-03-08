@@ -20,7 +20,7 @@ form.addEventListener("submit", (e) => {
                     messageOne.textContent = responseLocation;
                     const { temperature, precipitationProbability } =
                         body.weatherInfo.data.values;
-                    messageTwo.textContent = `Sky is ${body.summary}. Temperature is ${temperature}C. There is ${precipitationProbability}% chance of rain`;
+                    messageTwo.textContent = `${body.summary}. Temperature is ${temperature}C. There is ${precipitationProbability}% chance of rain`;
                 }
             });
         })
